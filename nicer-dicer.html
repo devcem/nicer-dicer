@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Nicer-dicer</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <style type="text/css">
+            #container{
+                overflow: scroll;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper" class="container">
+            <nav class="navbar navbar-default" style="margin-top: 20px;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand">
+                            Nicer-Dicer
+                        </a>
+                        <p class="navbar-text">A plugin that helps on HTML structured slices</p>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="content">
+                <div class="row">
+                    <div id="container" class="col-md-8">
+                        <canvas id="canvas" width="780" height="900"></canvas>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Image and canvas</div>
+                            <div class="panel-body">
+                                <p>
+                                    <label>Select Image</label>
+                                    <input type="file" class="form-control" id="file">
+                                </p>
+
+                                <p>
+                                    <label>Zoom</label>
+                                    <input type="range" max="1" min="0.3" step="0.05" class="form-control" id="zoom">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Slice Grid</div>
+                            <div class="panel-body">
+                                <p>
+                                    <label>Column Count</label>
+                                    <input type="number" class="form-control" id="col_number" value="3">
+                                </p>
+
+                                <p>
+                                    <label>Row Count</label>
+                                    <input type="number" class="form-control" id="row_number" value="3">
+                                </p>
+
+                                <p>
+                                    <label>Sliced Width</label>
+                                    <input type="number" class="form-control" id="sliced_width" value="210">
+                                </p>
+
+                                <p>
+                                    <label>Sliced Height</label>
+                                    <input type="number" class="form-control" id="sliced_height" value="250">
+                                </p>
+
+                                <p>
+                                    <label>Cell Padding (x)</label>
+                                    <input type="number" class="form-control" id="cell_padding_x" value="10">
+                                </p>
+
+                                <p>
+                                    <label>Cell Padding (y)</label>
+                                    <input type="number" class="form-control" id="cell_padding_y" value="10">
+                                </p>
+
+                                <p>
+                                    <label>Margin Top (x)</label>
+                                    <input type="number" class="form-control" id="margin_top" value="10">
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Output</div>
+                            <div class="panel-body">
+                                
+                            </div>
+                            <div class="panel-footer">
+                                <button onclick="app.downloadOutput();" class="btn btn-primary">Download Zip</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/nicer-dicer.js"></script>
+    </body>
+</html>
